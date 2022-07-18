@@ -1,0 +1,35 @@
+.homeSearchBarField{
+    padding: 0 1rem;
+    /* background-color: gainsboro; */
+}
+
+.homeSearchBarField_row1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.homeSearchBarField_row1_radios{
+
+}
+
+.homeSearchBarField_row2{
+    display: flex;
+}
+
+.homeSearchBarField_row2_inputDiv{
+    height: 50px;
+    flex: 1;
+}
+
+.homeSearchBarField_row2_inputDiv label{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1rem;
+}
+
+.homeSearchBarField_row2_inputDiv input{
+
+    border: none;
+    background-color: transparent;
+}

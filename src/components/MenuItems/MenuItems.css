@@ -1,0 +1,12 @@
+.menuList{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    height: 50px;
+    align-items: center;
+    background-color: white;
+}
+
+.menuItem{
+    
+}

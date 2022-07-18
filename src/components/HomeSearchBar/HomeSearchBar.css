@@ -1,0 +1,56 @@
+.homeSearchBar{
+    padding: 0 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    background-color: whitesmoke;
+}
+
+.homeSearchBar_login{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.homeSearchBar_loginList{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem
+}
+
+.homeSearchBar_formDiv{
+    height: 300px;
+    position: relative;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+
+.homeSearchBar_form{
+    padding-top: 2rem;
+    background-color: wheat;
+    height: 200px;
+    position: relative;
+}
+
+.homeSearchBar_searchButton{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    background-color: blue;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.homeSearchBar_menuItemsdiv{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
