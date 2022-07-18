@@ -1,0 +1,74 @@
+.offerCard{
+    /* height: 180px; */
+    min-width: 400px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px 0px grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.offerCard_row1{
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.offerCard_image{
+    height: 8rem;
+}
+
+.offerCard_image img{
+    height: 100%;
+    border-radius: 0.25rem;
+}
+
+.offerCard_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    padding-left: 0.5rem;
+    gap: 0.25rem;
+}
+
+.subHeading{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #6b7280;
+    font-size: 0.8rem;
+}
+
+.cardHeading{
+    margin: 0;
+}
+
+.offerCard_contentDivider{
+    width: 2rem;
+    height: 1px;
+    margin: 0.5rem 0;
+    background-color: orange;
+}
+
+.cardDescription{
+    text-align: start;
+    color: #6b7280;
+    font-size: 0.8rem;
+}
+
+.offerCard_row2{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.offerCard_row2 .tncText {
+    color: grey;
+    font-size: 0.7rem;
+}
+
+.offerCard_row2 .linkText {
+    color: #3b82f6;
+    font-weight: bold;
+}

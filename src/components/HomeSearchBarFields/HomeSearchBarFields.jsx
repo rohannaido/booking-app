@@ -19,33 +19,33 @@ const HomeSearchBarField = () => {
 
             <div className='homeSearchBarField_row2'>
                 <div className='homeSearchBarField_row2_inputDiv'>
-                    <label for='fromCity'>
-                        <span>From</span>
-                        <input type='text' name='fromCity' placeholder='Bengaluru'/>
+                    <label for='fromCity' >
+                        <span className='label'>From</span>
+                        <input type='text' name='fromCity' placeholder='From City'/>
                     </label>
                 </div>
                 <div className='homeSearchBarField_row2_inputDiv'>
                     <label for='toCity'>
-                        To
-                        <input type="text" name='toCity' placeholder='Delhi' />
+                        <span className='label'>To</span>
+                        <input type="text" name='toCity' placeholder='To City' />
                     </label>
                 </div>
                 <div className='homeSearchBarField_row2_inputDiv'>
                     <label for='departureDate'>
-                        Departure
+                        <span className='label'>Departure</span>
                         <input type='date' name='departureDate' />
                     </label>
                 </div>
                 <div className='homeSearchBarField_row2_inputDiv'>
                     <label for='returnDate'>
-                        Return
+                        <span className='label'>Return</span>
                         <input type='date' name='returnDate' />
                     </label>
                 </div>
                 <div className='homeSearchBarField_row2_inputDiv'>
                     <label for='noOfTravellers'>
-                        Travellers & Class
-                        <input type='number' for='noOfTravellers' />
+                        <span className='label'>Travellers & Class</span>
+                        <input type='number' for='noOfTravellers' placeholder='No. of Travellers'/>
                     </label>
                 </div>
             </div>

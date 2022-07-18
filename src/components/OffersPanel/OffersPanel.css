@@ -1,0 +1,58 @@
+.offersPanel{
+    margin: 2rem 6rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 0px grey;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+}
+
+.offersPanel_header{
+    display: flex;
+    gap: 2rem;
+}
+
+.offersPanel_heading{
+    margin: 0 1rem 0 0;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.offersPanel_tabList{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    height: 50px;
+    align-items: center;
+    background-color: white;
+    font-size: inherit;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px solid #d1d5db;
+    align-items: flex-end;
+}
+
+.offersPanel_tabListItem{
+    cursor: pointer;
+    padding-bottom: 0.5rem;
+}
+
+.offersPanel_tabListItem.active{
+    color: #3b82f6;
+    border-bottom: 2px solid #3b82f6;
+}
+
+.offersPanel_cardsDiv{
+    display: grid;
+    /* grid-template-columns: repeat(5, auto); */
+    grid-template-rows: auto auto;
+    /* display: flex; */
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem;
+    /* flex-wrap: wrap;
+    gap: 1rem; */
+}

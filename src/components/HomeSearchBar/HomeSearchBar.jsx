@@ -1,13 +1,15 @@
 import HomeSearchBarField from '../HomeSearchBarFields/HomeSearchBarFields';
 import MenuItems from '../MenuItems/MenuItems';
 import './HomeSearchBar.css'
+import homeBg from '../../images/homeBackground.jpg'
+import logo from '../../images/logo.png'
 
 const HomeSearchBar = () => {
     return(
-        <div className="homeSearchBar">
+        <div className="homeSearchBar" style={{backgroundImage: "url("+homeBg+")"}}>
             <div className='homeSearchBar_login'>
                 <div className='logo'>
-                    takeMyTrip
+                    <img src={logo} />
                 </div>
                 <ul className='homeSearchBar_loginList'>
                     <li>Download the App</li>

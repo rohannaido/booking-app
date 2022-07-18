@@ -3,8 +3,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 400px;
     background-color: whitesmoke;
+}
+
+.homeSearchBar .logo{
+    width: 200px;
+    height: 50px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
 }
 
 .homeSearchBar_login{
@@ -21,17 +31,14 @@
 }
 
 .homeSearchBar_formDiv{
-    height: 300px;
+    margin: 4rem 0 3rem 0;
     position: relative;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
 }
 
 .homeSearchBar_form{
-    padding-top: 2rem;
-    background-color: wheat;
-    height: 200px;
+    padding: 2rem 0 3rem 0;
+    background-color: white;
+    border-radius: 1rem;
     position: relative;
 }
 
@@ -40,12 +47,15 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%) translateY(50%);
-    background-color: blue;
+    background-color: #3b82f6;
     color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
+    padding: 0.5rem 2rem;
+    border-radius: 1.5rem;
     border: none;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-transform: uppercase;
 }
 
 .homeSearchBar_menuItemsdiv{
@@ -53,4 +63,9 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0 0 10px 0px grey;
+    padding: 0 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
 }

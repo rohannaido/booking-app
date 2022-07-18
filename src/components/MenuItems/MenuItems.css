@@ -5,6 +5,7 @@
     height: 50px;
     align-items: center;
     background-color: white;
+    font-size: inherit;
 }
 
 .menuItem{
