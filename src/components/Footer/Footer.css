@@ -1,0 +1,22 @@
+footer{
+    background-color: black;
+    height: 150px;
+    padding: 0 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_socialLinks{
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.footer_infoText{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}

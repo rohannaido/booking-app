@@ -16,11 +16,18 @@
 
 .homeSearchBarField_row2{
     display: flex;
+    border: 1px solid gainsboro;
+    border-radius: 0.5rem;
 }
 
 .homeSearchBarField_row2_inputDiv{
+    padding: 0.5rem 0;
     height: 50px;
     flex: 1;
+}
+
+.homeSearchBarField_row2_inputDiv:hover{
+    background-color: #eff6ff;
 }
 
 .homeSearchBarField_row2_inputDiv label{

@@ -12,6 +12,7 @@
 .offersPanel_header{
     display: flex;
     gap: 2rem;
+    justify-content: space-between;
 }
 
 .offersPanel_heading{

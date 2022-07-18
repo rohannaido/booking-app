@@ -6,8 +6,9 @@
     align-items: center;
     background-color: white;
     font-size: inherit;
+    font-size: 0.8rem;
 }
 
 .menuItem{
-    
+    cursor: pointer;
 }
