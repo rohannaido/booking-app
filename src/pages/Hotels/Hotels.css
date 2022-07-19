@@ -54,7 +54,7 @@
     gap: 0.5rem;
 }
 
-.hotelsPage_applyFiltersButton{
+.hotelsPage_clearFiltersButton{
     padding: 0.5rem;
     cursor: pointer;
     font-size: inherit;
