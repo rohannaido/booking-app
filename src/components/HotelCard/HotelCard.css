@@ -1,8 +1,58 @@
 .hotelCard{
-    /* height: 200px; */
-    width: 600px;
+    /* height: 300px; */
+    /* width: 600px; */
     /* width:fit-content; */
-    box-shadow: 0px 0px 10px 0px gray;
-    border-radius: 1rem;
+    box-shadow: 0px 0px 5px 0px gray;
+    border-radius: 0.5rem;
     padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hotelCard:hover{
+    background-color: aliceblue;
+    box-shadow: 0px 0px 5px 0px #60a5fa;
+    /* border: 1px solid #60a5fa; */
+}
+
+.hotelCard_imageDiv{
+    flex: 1;
+}
+
+.hotelCard_imageDiv > img{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.hotelCard_contentDiv{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem
+}
+
+.hotelCard_title{
+    margin: 0;
+}
+
+.hotelCard_description{
+    margin: 0;
+}
+
+.hotelCard_ratingText{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.75rem;
+    margin-right: 0.5rem;
+}
+
+.hotelCard_ratings{
+    font-weight: bold;
+}
+
+.hotelCard_price{
+    font-weight: bold;
+    font-size: 1.25rem;
 }

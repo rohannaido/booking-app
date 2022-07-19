@@ -2,6 +2,7 @@ import MenuItems from '../MenuItems/MenuItems';
 import './NavBar.css';
 import logo from '../../images/logo-black.png'
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const NavBar = ({type}) => {
     
@@ -47,9 +48,11 @@ const NavBar = ({type}) => {
     return (
         <nav className="nav" style={getNavBarStyle(type)}>
             <div className='nav_container'>
+              <Link to='/'>
                 <div className='logo'>
                     <img src={logo} alt="app logo" />
                 </div>
+              </Link>
                 <MenuItems />
                 <ul className="nav_loginList">
                     <li className='nav_loginItem'>Login</li>

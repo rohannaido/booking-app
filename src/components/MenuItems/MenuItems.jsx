@@ -2,18 +2,21 @@ import './MenuItems.css'
 import { RiFlightTakeoffFill, RiHotelFill, RiHome4Fill, RiTrainFill, RiBus2Fill, RiCarFill, RiMoneyDollarBoxFill } from "react-icons/ri";
 import { GiRiver } from 'react-icons/gi'
 // import { FaHiking } from 'react-icons/fa';
+import {Link} from 'react-router-dom';
 
 const MenuItems = () => {
     return(
         <ul className="menuList">
-            <li className='menuItem'>
-                <span className='menuList_icon'>
-                    <RiHotelFill />
-                </span>
-                <span className='menuList_text'>
-                    Hotels
-                </span>
-            </li>
+            <Link to='/'>
+                <li className='menuItem'>
+                    <span className='menuList_icon'>
+                        <RiHotelFill />
+                    </span>
+                    <span className='menuList_text'>
+                        Hotels
+                    </span>
+                </li>
+            </Link>
             <li className='menuItem'>
                 <span className='menuList_icon'>
                     <RiFlightTakeoffFill />
