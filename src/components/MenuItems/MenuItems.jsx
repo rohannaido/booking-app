@@ -8,18 +8,18 @@ const MenuItems = () => {
         <ul className="menuList">
             <li className='menuItem'>
                 <span className='menuList_icon'>
-                    <RiFlightTakeoffFill />
-                </span>
-                <span className='menuList_text'>
-                    Flights
-                </span>
-            </li>
-            <li className='menuItem'>
-                <span className='menuList_icon'>
                     <RiHotelFill />
                 </span>
                 <span className='menuList_text'>
                     Hotels
+                </span>
+            </li>
+            <li className='menuItem'>
+                <span className='menuList_icon'>
+                    <RiFlightTakeoffFill />
+                </span>
+                <span className='menuList_text'>
+                    Flights
                 </span>
             </li>
             <li className='menuItem'>

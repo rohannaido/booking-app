@@ -2,12 +2,13 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: white;
     height: 60px;
     width: 100vw;
     z-index: 1;
     transition: transform 250ms;
     box-shadow: 0 0 5px 0px grey;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
 }
 
 .nav_container{

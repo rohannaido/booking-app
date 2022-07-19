@@ -1,4 +1,4 @@
-import HomeSearchBarField from '../HomeSearchBarFields/HomeSearchBarFields';
+import HotelSearchFields from '../SearchFields/HotelSearchFields';
 import MenuItems from '../MenuItems/MenuItems';
 import './HomeSearchBar.css'
 import homeBg from '../../images/homeBackground.jpg'
@@ -20,7 +20,7 @@ const HomeSearchBar = () => {
             </div>
             <div className='homeSearchBar_formDiv'>
                 <div className='homeSearchBar_form'>
-                    <HomeSearchBarField type={"flight"} />
+                    <HotelSearchFields />
                     <button className='homeSearchBar_searchButton'>
                         Search
                     </button>

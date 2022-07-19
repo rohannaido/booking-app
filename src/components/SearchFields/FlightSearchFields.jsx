@@ -1,6 +1,6 @@
-import './HomeSearchBarFields.css';
+import './SearchFields.css';
 
-const HomeSearchBarField = () => {
+const FlightSearchFields = ({type}) => {
     return(
         <div className='homeSearchBarField'>
             <div className='homeSearchBarField_row1'>
@@ -53,4 +53,4 @@ const HomeSearchBarField = () => {
     );
 }
 
-export default HomeSearchBarField;
+export default FlightSearchFields;
