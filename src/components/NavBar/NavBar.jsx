@@ -23,8 +23,29 @@ const NavBar = ({type}) => {
       
     },[])
 
+    const getNavBarStyle = (type) => {
+      if(type === "fixed"){
+        return {
+          transform: 'translateY(0%)',
+          position: "fixed",
+        }
+      }
+      else if(type === "static"){
+        return {
+          transform: 'translateY(0%)',
+          position: "static",
+        }
+      }
+      else if(showNavBar){
+        return {
+          transform: 'translateY(0%)',
+          position: "fixed",
+        }
+      }
+    }
+
     return (
-        <nav className="nav" style={{transform: (type ==="fixed" || showNavBar) ? 'translateY(0%)' : 'translateY(-100%)'}}>
+        <nav className="nav" style={getNavBarStyle(type)}>
             <div className='nav_container'>
                 <div className='logo'>
                     <img src={logo} alt="app logo" />

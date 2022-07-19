@@ -3,8 +3,13 @@ import MenuItems from '../MenuItems/MenuItems';
 import './HomeSearchBar.css'
 import homeBg from '../../images/homeBackground.jpg'
 import logo from '../../images/logo.png'
+import {Link} from 'react-router-dom';
+import { useState } from 'react';
 
 const HomeSearchBar = () => {
+
+    const [ searchValue, setSearchValue ] = useState({cityName: ''});
+
     return(
         <div className="homeSearchBar" style={{backgroundImage: "url("+homeBg+")"}}>
             <div className='homeSearchBar_login'>
@@ -20,10 +25,12 @@ const HomeSearchBar = () => {
             </div>
             <div className='homeSearchBar_formDiv'>
                 <div className='homeSearchBar_form'>
-                    <HotelSearchFields />
-                    <button className='homeSearchBar_searchButton'>
-                        Search
-                    </button>
+                    <HotelSearchFields searchValue={searchValue} setSearchValue={setSearchValue} />
+                    <Link to={'/hotels/' + searchValue}>
+                        <button className='homeSearchBar_searchButton'>
+                            Search
+                        </button>
+                    </Link>
                 </div>
                 <div className='homeSearchBar_menuItemsdiv'>
                     <MenuItems />

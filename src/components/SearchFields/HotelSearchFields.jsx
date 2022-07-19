@@ -1,6 +1,12 @@
 import './SearchFields.css';
 
-const HotelSearchFields = ({type}) => {
+const HotelSearchFields = ({searchValue, setSearchValue}) => {
+
+    const setCityName = (e) => {
+        // console.log(e.target.value);
+        setSearchValue(e.target.value);
+    }
+
     return(
         <div className='homeSearchBarField'>
             <div className='homeSearchBarField_row1'>
@@ -21,7 +27,7 @@ const HotelSearchFields = ({type}) => {
                 <div className='homeSearchBarField_row2_inputDiv'>
                     <label for='cityName' >
                         <span className='label'>City</span>
-                        <input type='text' name='cityName' placeholder='City Name'/>
+                        <input type='text' name='cityName' placeholder='City Name' onChange={setCityName}/>
                     </label>
                 </div>
                 <div className='homeSearchBarField_row2_inputDiv'>

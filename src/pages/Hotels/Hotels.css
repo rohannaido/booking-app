@@ -1,0 +1,41 @@
+.hotelsPage{
+    margin: 1rem 6rem;
+    display: flex;
+    position: relative;
+    gap: 1rem
+}
+
+.hotelsPage_filtersPanel{
+    position: sticky;
+    top: 2rem;
+    width: 200px;
+    height: fit-content;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: aliceblue;
+    /* box-shadow: 0px 0px 10px 0 gray; */
+}
+
+.hotelsPage_filterItem{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.hotelsPage_filterHeading{
+    font-weight: bold;
+}
+
+.hotelsPage_filterOptions{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.hotelsPage_applyFiltersButton{
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: inherit;
+}
