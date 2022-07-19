@@ -8,12 +8,22 @@ import {getHotelsByCity} from '../../firebase.js';
 
 const Hotels = () => {
 
-
-
     const [hotelsList, setHotelsList] = useState([]);
+
     const location = useLocation();
     const cityName = location.pathname.split("/")[2];
 
+    const sortHotels = (e) => {
+        
+        if(e.target.value === "htol"){
+            setHotelsList(prev => { return [...prev.sort((a, b) => b.price - a.price )] });
+        }
+        else if(e.target.value === "ltoh"){
+            setHotelsList(prev => { return [...prev.sort((a, b) => a.price - b.price )] });
+        }
+
+    }
+    
     useEffect(() => {
         console.log("TEST HOTEL LIST CALL")
         const getHotels = async (cityName) => {
@@ -23,6 +33,8 @@ const Hotels = () => {
         getHotels(cityName);
     },[])
     
+    
+
     return (
         <>
             <NavBar type="static" />
@@ -35,7 +47,7 @@ const Hotels = () => {
                         <div className='hotelsPage_filterItem sort'>
                             <label htmlFor="priceSort">
                                 <span className='hotelsPage_sortLabel'>Price:</span>
-                                <select id="priceSort" name="priceSort">
+                                <select id="priceSort" name="priceSort" onChange={sortHotels}>
                                     <option value="default" selected disabled>Select option</option>
                                     <option value="ltoh">Low to High</option>
                                     <option value="htol">High to Low</option>
@@ -43,7 +55,7 @@ const Hotels = () => {
                             </label>
                         </div>
 
-                        <div className='hotelsPage_filterItem sort'>
+                        {/* <div className='hotelsPage_filterItem sort'>
                             <label htmlFor="ratingSort">
                                 <span className='hotelsPage_sortLabel'>Ratings:</span>
                                 <select id="ratingSort" name="ratingSort">
@@ -52,7 +64,7 @@ const Hotels = () => {
                                     <option value="ltoh">Low to High</option>
                                 </select>
                             </label>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div>
