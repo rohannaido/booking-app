@@ -3,7 +3,7 @@ nav{
     top: 0;
     left: 0;
     background-color: white;
-    height: 50px;
+    height: 60px;
     width: 100vw;
     z-index: 1;
     transition: transform 250ms;
@@ -15,6 +15,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 0 6rem;
+    height: 100%;
     
 }
 

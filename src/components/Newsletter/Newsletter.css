@@ -39,7 +39,7 @@
 .newsletter_emailInputDiv{
     display: flex;
     border: 1px solid gray;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
 }
 
 .newsletter_emailInputDiv input{

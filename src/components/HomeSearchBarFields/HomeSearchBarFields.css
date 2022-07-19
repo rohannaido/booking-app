@@ -12,6 +12,9 @@
 .homeSearchBarField_row1_radios{
     display: flex;
     gap: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #9ca3af;
 }
 
 .homeSearchBarField_row2{
@@ -24,6 +27,11 @@
     padding: 0.5rem 0;
     height: 50px;
     flex: 1;
+    border-right: 1px solid gainsboro;
+}
+
+.homeSearchBarField_row2_inputDiv:last-child{
+    border-right: none;
 }
 
 .homeSearchBarField_row2_inputDiv:hover{

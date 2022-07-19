@@ -1,38 +1,91 @@
 import './MenuItems.css'
+import { RiFlightTakeoffFill, RiHotelFill, RiHome4Fill, RiTrainFill, RiBus2Fill, RiCarFill, RiMoneyDollarBoxFill } from "react-icons/ri";
+import { GiRiver } from 'react-icons/gi'
+// import { FaHiking } from 'react-icons/fa';
 
 const MenuItems = () => {
     return(
         <ul className="menuList">
             <li className='menuItem'>
-                Flights
+                <span className='menuList_icon'>
+                    <RiFlightTakeoffFill />
+                </span>
+                <span className='menuList_text'>
+                    Flights
+                </span>
             </li>
             <li className='menuItem'>
-                Hotels
+                <span className='menuList_icon'>
+                    <RiHotelFill />
+                </span>
+                <span className='menuList_text'>
+                    Hotels
+                </span>
             </li>
             <li className='menuItem'>
-                Homestays
+                <span className='menuList_icon'>
+                    <RiHome4Fill />
+                </span>
+                <span className='menuList_text'>
+                    Homestays
+                </span>
             </li>
             <li className='menuItem'>
-                Holiday Packages
+                <span className='menuList_icon'>
+                    <GiRiver />
+                </span>
+                <span className='menuList_text'>
+                    Holiday Packages
+                </span>
             </li>
             <li className='menuItem'>
-                Trains
+                <span className='menuList_icon'>
+                    <RiTrainFill />
+                </span>
+                <span className='menuList_text'>
+                    Trains
+                </span>
             </li>
             <li className='menuItem'>
-                Buses
+                <span className='menuList_icon'>
+                    <RiBus2Fill />
+                </span>
+                <span className='menuList_text'>
+                    Buses
+                </span>
             </li>
             <li className='menuItem'>
-                Cabs
+                <span className='menuList_icon'>
+                    <RiCarFill />
+                </span>
+                <span className='menuList_text'>
+                    Cabs
+                </span>
             </li>
             <li className='menuItem'>
-                Forex
+                <span className='menuList_icon'>
+                    <RiMoneyDollarBoxFill />
+                </span>
+                <span className='menuList_text'>
+                    Forex
+                </span>
             </li>
-            <li className='menuItem'>
-                Charter Flights
-            </li>
-            <li className='menuItem'>
-                Activities
-            </li>
+            {/* <li className='menuItem'>
+                <span className='menuList_icon'>
+                    <RiHotelFill />
+                </span>
+                <span className='menuList_text'>
+                    Charter Flights
+                </span>
+            </li> */}
+            {/* <li className='menuItem'>
+                <span className='menuList_icon'>
+                    <FaHiking />
+                </span>
+                <span className='menuList_text'>
+                    Activities
+                </span>
+            </li> */}
         </ul>
     )
 }
