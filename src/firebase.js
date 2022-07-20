@@ -22,9 +22,11 @@ async function getHotelsByCity(cityName){
     
     const hotelsList = [];
 
+    console.log(querySnapshot);
     querySnapshot.forEach((doc) => {
-        hotelsList.push(doc.data());
-        // console.log(doc.id, " => ", doc.data());
+        // console.log(doc.id);
+        hotelsList.push({...doc.data(), id: doc.id});
+        //Adding document id to the hotel data
     });
 
     return hotelsList;
@@ -35,12 +37,21 @@ async function getHotelCities(){
   const docSnap = await getDoc(docRef);
 
   if (docSnap.exists()) {
-    console.log("Document data:", docSnap.data());
     return docSnap.data().cities;
   } else {
-    // doc.data() will be undefined in this case
     console.log("No such document!");
   }
 }
 
-export {getHotelsByCity, getHotelCities};
+async function getHotelData(hotelId){
+  const docRef = doc(db, "Hotels", hotelId);
+  const docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    return docSnap.data();
+  } else {
+    console.log("No such document!");
+  }
+}
+
+export {getHotelsByCity, getHotelCities, getHotelData};

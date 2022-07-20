@@ -12,7 +12,7 @@ const HotelSearchFields = ({searchValue, setSearchValue}) => {
 
     const setCityName = (e) => {
         setCitySearch(e.target.value);
-        setSearchValue(e.target.value);
+        setSearchValue({cityName: e.target.value});
     }
 
     getHotelCities();
@@ -45,12 +45,17 @@ const HotelSearchFields = ({searchValue, setSearchValue}) => {
                             {showCitiesOption && (citiesList.length > 0) ? 
                                 <ul> 
                                     {citiesList.map((cityName) => 
-                                    <Link to={`/hotels/${cityName}`}>
                                         <li onMouseEnter={() => {setHoverCityOptions(true)}} 
-                                            onMouseLeave={() => {setHoverCityOptions(false)}}>
+                                            // onMouseLeave={() => {setHoverCityOptions(false)}} 
+                                            onClick={() => {
+                                                setCitySearch(cityName)
+                                                setSearchValue({cityName: cityName})
+                                                setShowCitiesOption(false)
+                                                }}>
                                             {cityName}
                                         </li>
-                                    </Link>)}
+                                    )
+                                }
                                 </ul>
                                 : <></> }
                         </div>

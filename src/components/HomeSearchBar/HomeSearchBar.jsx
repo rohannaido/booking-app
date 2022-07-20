@@ -26,7 +26,7 @@ const HomeSearchBar = () => {
             <div className='homeSearchBar_formDiv'>
                 <div className='homeSearchBar_form'>
                     <HotelSearchFields searchValue={searchValue} setSearchValue={setSearchValue} />
-                    <Link to={'/hotels/' + searchValue}>
+                    <Link to={'/hotels/' + searchValue.cityName}>
                         <button className='homeSearchBar_searchButton'>
                             Search
                         </button>

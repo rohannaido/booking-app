@@ -1,0 +1,32 @@
+.hotelPage_div{
+    display: flex;
+    margin: 2rem 6rem;
+    gap: 2rem;
+    height: 100vh;
+}
+
+.hotelPage_div h1{
+    margin: 0 0 1rem 0;
+}
+
+.hotelPage_imageDiv{
+    min-width: 400px;
+}
+
+.hotelPage_imageDiv > img{
+    width: 100%;
+}
+
+.hotelPage_bookButton{
+    cursor: pointer;
+    background-color: #1e3a8a;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 1rem;
+    border: none;
+}
+
+.hotelPage_bookButton:hover {
+    background-color: #1d4ed8;
+}
