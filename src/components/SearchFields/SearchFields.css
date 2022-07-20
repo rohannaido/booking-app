@@ -30,6 +30,34 @@
     border-right: 1px solid gainsboro;
 }
 
+.homeSearchBarField_row2_optionsDiv{
+    width: 80%;
+}
+
+.homeSearchBarField_row2_optionsDiv ul{
+    list-style: none;
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 100%;
+    border: 1px solid #e5e7eb;
+}
+
+.homeSearchBarField_row2_optionsDiv li{
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    text-transform: capitalize;
+}
+
+
+.homeSearchBarField_row2_optionsDiv a{
+    color: inherit;
+}
+
+.homeSearchBarField_row2_optionsDiv li:hover{
+    background-color: #e5e7eb;
+}
+
 .homeSearchBarField_row2_inputDiv:last-child{
     border-right: none;
 }
