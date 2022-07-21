@@ -7,7 +7,7 @@ const HotelsListPanel = ({hotelsList}) => {
     return (
         <div className='hotelsListPanel'>
             {(hotelsList.length) ? hotelsList.map((item) => 
-            <Link to={`/hotel/${item.id}`}>
+            <Link to={`/hotel/${item.id}`} key={item.id} >
                 <HotelCard hotelData={item} />
             </Link>
             ) : "No Hotels Found"}

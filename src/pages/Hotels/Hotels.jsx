@@ -74,7 +74,7 @@ const Hotels = () => {
                             <label htmlFor="priceSort">
                                 <span className='hotelsPage_sortLabel'>Price:</span>
                                 <select id="priceSort" name="priceSort" onChange={sortHotels}>
-                                    <option value="default" selected disabled>Select option</option>
+                                    <option value="default" defaultValue>Select option</option>
                                     <option value="ltoh">Low to High</option>
                                     <option value="htol">High to Low</option>
                                 </select>
@@ -103,19 +103,19 @@ const Hotels = () => {
                                 <label htmlFor="userRatingFilter">
                                     <input type="radio" name='priceFilter' value='0-5000' 
                                     checked={priceFilterRadio === '0-5000'} 
-                                    onClick={() => setPriceFilterRadio('0-5000') } />
+                                    onChange={() => setPriceFilterRadio('0-5000') } />
                                     ₹ 0 - ₹ 5000
                                 </label>
                                 <label htmlFor="userRatingFilter">
                                     <input type="radio" name='priceFilter' value='5000-10000' 
                                     checked={priceFilterRadio === '5000-10000'} 
-                                    onClick={() => setPriceFilterRadio('5000-10000') } />
+                                    onChange={() => setPriceFilterRadio('5000-10000') } />
                                     ₹ 5000 - ₹ 10000
                                 </label>
                                 <label htmlFor="userRatingFilter">
                                     <input type="radio" name='priceFilter' value='10000-20000' 
                                     checked={priceFilterRadio === '10000-20000'} 
-                                    onClick={() => setPriceFilterRadio('10000-20000') } />
+                                    onChange={() => setPriceFilterRadio('10000-20000') } />
                                     ₹ 10000 - ₹ 20000
                                 </label>
                             </div>

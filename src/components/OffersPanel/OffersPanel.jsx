@@ -61,7 +61,7 @@ const OffersPanel = () => {
             </div>
             
             <div className='offersPanel_cardsDiv' style={{gridTemplateColumns: "repeat(" + getGridColumnNumber(arr) + ",auto)"}}>
-                {arr.map((item) => <OfferCard />)}
+                {arr.map((item) => <OfferCard key={item.toString()} />)}
             </div>
         </div>
     )

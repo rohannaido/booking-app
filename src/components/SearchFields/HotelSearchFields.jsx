@@ -35,7 +35,7 @@ const HotelSearchFields = ({searchValue, setSearchValue}) => {
             <div className='homeSearchBarField_row2'>
                 <div className='homeSearchBarField_row2_inputDiv'>
 
-                    <label for='cityName' >
+                    <label htmlFor='cityName' >
                         <span className='label'>City</span>
                         <input type='text' name='cityName' placeholder='City Name' onChange={setCityName} value={citySearch}
                         onFocus={() => {setShowCitiesOption(true)}} 
@@ -45,7 +45,8 @@ const HotelSearchFields = ({searchValue, setSearchValue}) => {
                             {showCitiesOption && (citiesList.length > 0) ? 
                                 <ul> 
                                     {citiesList.map((cityName) => 
-                                        <li onMouseEnter={() => {setHoverCityOptions(true)}} 
+                                        <li key={cityName}
+                                            onMouseEnter={() => {setHoverCityOptions(true)}} 
                                             // onMouseLeave={() => {setHoverCityOptions(false)}} 
                                             onClick={() => {
                                                 setCitySearch(cityName)
@@ -63,21 +64,21 @@ const HotelSearchFields = ({searchValue, setSearchValue}) => {
 
                 </div>
                 <div className='homeSearchBarField_row2_inputDiv'>
-                    <label for='checkInDate'>
+                    <label htmlFor='checkInDate'>
                         <span className='label'>Check In</span>
                         <input type='date' name='departureDate' />
                     </label>
                 </div>
                 <div className='homeSearchBarField_row2_inputDiv'>
-                    <label for='checkOutDate'>
+                    <label htmlFor='checkOutDate'>
                         <span className='label'>Check Out</span>
                         <input type='date' name='checkOutDate' />
                     </label>
                 </div>
                 <div className='homeSearchBarField_row2_inputDiv'>
-                    <label for='noOfRooms'>
+                    <label htmlFor='noOfRooms'>
                         <span className='label'>Rooms</span>
-                        <input type='number' for='noOfRooms' placeholder='No. of Rooms'/>
+                        <input type='number' name='noOfRooms' placeholder='No. of Rooms'/>
                     </label>
                 </div>
                 

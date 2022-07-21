@@ -1,8 +1,8 @@
 import './OfferCard.css'
 
-const OfferCard = () => {
+const OfferCard = ({keyItem}) => {
     return(
-        <div className='offerCard'>
+        <div className='offerCard' >
             <div className='offerCard_row1'>
                 <div className='offerCard_image'>
                     <img src="https://promos.makemytrip.com/notification/xhdpi//Desktop_NearbyGetaway_12July.jpg" alt="Desktop_NearbyGetaway_12" />
