@@ -5,13 +5,17 @@ import './Home.css'
 import Footer from "../../components/Footer/Footer";
 import Newsletter from "../../components/Newsletter/Newsletter";
 import { useState } from 'react';
+import LoginPanel from "../../components/LoginPanel/LoginPanel";
 
 const Home = () => {
 
+    const [showLogin, setShowLogin] = useState(false);
+
     return (
     <div className="home">
-        <NavBar />
-        <HomeSearchBar />
+        <NavBar setShowLogin={setShowLogin} />
+        {showLogin && <LoginPanel setShowLogin={setShowLogin} />}
+        <HomeSearchBar setShowLogin={setShowLogin} />
         <OffersPanel />
         <Newsletter />
         <Footer />

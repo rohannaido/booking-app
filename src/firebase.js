@@ -10,10 +10,11 @@ import {
   query,
   where 
 } from "firebase/firestore"; 
-
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app);
 
 async function getHotelsByCity(cityName){
     const q = query(collection(db, "Hotels"), where("city", "==" , cityName));
@@ -54,4 +55,20 @@ async function getHotelData(hotelId){
   }
 }
 
-export {getHotelsByCity, getHotelCities, getHotelData};
+ async function loginToApp(email, password){
+  console.log(email + ":::; " + password);
+  try{
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+    return user;
+  }
+  catch(error){
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // return errorCode;
+    throw errorCode;
+    // console.log(error);
+  }
+}
+
+export {getHotelsByCity, getHotelCities, getHotelData, loginToApp};

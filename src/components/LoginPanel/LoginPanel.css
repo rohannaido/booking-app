@@ -1,0 +1,83 @@
+.loginPanel{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+.loginPanel_div{
+    height: 400px;
+    width: 400px;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    padding: 1rem;
+    box-shadow: 0px 0px 15px 0px gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginPanel_div h1{
+    margin: 0;
+}
+
+.loginPanel_form{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.loginPanel_form input{
+    width: 100%;
+    padding: 0.5rem;
+    font-size: inherit;
+    border: 1px solid #9ca3af;
+    border-radius: 0.5rem;
+}
+
+.loginPanel_form > label{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginPanel_errorText{
+    color: red;
+    font-size: 80%;
+}
+
+.loginPage_loginBtn{
+    padding: 0.75rem 1rem;
+    font-size: inherit;
+    width: 100%;
+    background-color: #1d4ed8;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.loginPage_loginBtn:hover{
+    background-color: #2563eb;
+}
+
+.loginPanel_closeBtn{
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}

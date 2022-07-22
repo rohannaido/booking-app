@@ -2,6 +2,7 @@ import './HotelPage.css'
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getHotelData } from '../../firebase';
+import LoginPanel from '../../components/LoginPanel/LoginPanel';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
 
@@ -22,9 +23,12 @@ const HotelPage = () => {
         getData();
     },[])
 
+    const [showLogin, setShowLogin] = useState(false);
+
     return (
         <div className='hotelPage'>
-            <NavBar type="static" />
+            {showLogin && <LoginPanel setShowLogin={setShowLogin} />}
+            <NavBar type={"static"} setShowLogin={setShowLogin} />
             <div className='hotelPage_div'>
                 <div className='hotelPage_imageDiv'>
                     <img src={hotelData.mainImage} alt={hotelData.name} />

@@ -4,10 +4,11 @@ import logo from '../../images/logo-black.png'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const NavBar = ({type}) => {
-    
-    const [showNavBar, setShowNavBar] = useState(false);
+const NavBar = (props) => {
 
+  const {type, setShowLogin} = props;
+  const [showNavBar, setShowNavBar] = useState(false);
+  
     const scrollAction = () => {
       if(window.pageYOffset > 150){
         setShowNavBar(true);
@@ -17,6 +18,7 @@ const NavBar = ({type}) => {
       }
     }
   
+  console.log(props);
     
     useEffect(() => {
       
@@ -45,6 +47,8 @@ const NavBar = ({type}) => {
       }
     }
 
+    
+
     return (
         <nav className="nav" style={getNavBarStyle(type)}>
             <div className='nav_container'>
@@ -55,9 +59,9 @@ const NavBar = ({type}) => {
               </Link>
                 <MenuItems />
                 <ul className="nav_loginList">
-                    <li className='nav_loginItem'>Login</li>
-                    <li className='nav_loginItem'>Country</li>
-                    <li className='nav_loginItem'>Language</li>
+                    <li className='nav_loginItem' onClick={() => { setShowLogin(true) }}>
+                      Login
+                    </li>
                 </ul>
             </div>
         </nav>

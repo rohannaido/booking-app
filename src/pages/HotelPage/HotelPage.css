@@ -1,8 +1,13 @@
+.hotelPage{
+    position: relative;
+}
+
 .hotelPage_div{
     display: flex;
     margin: 2rem 6rem;
     gap: 2rem;
     height: 100vh;
+    position: relative;
 }
 
 .hotelPage_div h1{

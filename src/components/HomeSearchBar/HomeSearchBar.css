@@ -27,7 +27,13 @@
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 1rem
+    gap: 1rem;
+    color: white;
+}
+
+.homeSearchBar_loginBtn{
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .homeSearchBar_formDiv{

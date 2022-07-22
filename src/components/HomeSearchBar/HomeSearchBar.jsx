@@ -6,7 +6,7 @@ import logo from '../../images/logo.png'
 import {Link} from 'react-router-dom';
 import { useState } from 'react';
 
-const HomeSearchBar = () => {
+const HomeSearchBar = ({setShowLogin}) => {
 
     const [ searchValue, setSearchValue ] = useState({cityName: ''});
 
@@ -17,10 +17,12 @@ const HomeSearchBar = () => {
                     <img src={logo} />
                 </div>
                 <ul className='homeSearchBar_loginList'>
-                    <li>Download the App</li>
+                    {/* <li>Download the App</li>
                     <li>Introducing myBiz</li>
-                    <li>My Trips</li>
-                    <li>Login create Account</li>
+                    <li>My Trips</li> */}
+                    <li className='homeSearchBar_loginBtn' onClick={() => setShowLogin(true)}>
+                        Login
+                    </li>
                 </ul>
             </div>
             <div className='homeSearchBar_formDiv'>

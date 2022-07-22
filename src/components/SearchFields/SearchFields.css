@@ -21,11 +21,13 @@
     display: flex;
     border: 1px solid gainsboro;
     border-radius: 0.5rem;
+    /* height: 100px; */
+    flex-wrap: wrap;
 }
 
 .homeSearchBarField_row2_inputDiv{
     padding: 0.5rem 0;
-    height: 50px;
+    /* height: 60px; */
     flex: 1;
     border-right: 1px solid gainsboro;
 }

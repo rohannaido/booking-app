@@ -5,6 +5,7 @@ import './Hotels.css'
 import { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import {getHotelsByCity} from '../../firebase.js';
+import LoginPanel from '../../components/LoginPanel/LoginPanel';
 
 const Hotels = () => {
 
@@ -58,12 +59,14 @@ const Hotels = () => {
         }
         getHotels(cityName);
     },[])
-    
-    
 
+    const [showLogin, setShowLogin] = useState(false)
+    
+    
     return (
         <>
-            <NavBar type="static" />
+            {showLogin && <LoginPanel setShowLogin={setShowLogin} />}
+            <NavBar type={"static"} setShowLogin={setShowLogin} />
             <div className='hotelsPage'>
 
                 <div className='hotelsPage_filtersPanel'>
