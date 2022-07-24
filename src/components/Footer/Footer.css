@@ -1,7 +1,7 @@
 footer{
     background-color: black;
     height: 150px;
-    padding: 0 6rem;
+    padding: 0 var(--side-margin);
     display: flex;
     justify-content: space-between;
     align-items: center;

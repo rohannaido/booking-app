@@ -1,5 +1,5 @@
 .homeSearchBar{
-    padding: 0 6rem;
+    padding: 0 var(--side-margin);
     display: flex;
     flex-direction: column;
     justify-content: space-between;

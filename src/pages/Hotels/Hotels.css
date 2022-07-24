@@ -1,9 +1,10 @@
 .hotelsPage{
-    margin: 1rem 6rem;
+    margin: 1rem var(--side-margin);
     display: flex;
     position: relative;
     gap: 1rem
 }
+
 
 .hotelsPage_filtersPanel{
     position: sticky;
@@ -17,6 +18,25 @@
     background-color: #1e3a8a;
     color: white;
     border-radius: 0.5rem;
+    transform: translateX(0%);
+    transition: transform 0.3s;
+}
+
+.hotelsPage_sortingFilters{
+    position: absolute;
+    right: 0rem;
+    transform: translateX(100%);
+    color: black;
+    width: 100px;
+    padding-left: 2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    font-size: 0.8rem;
+    display: none;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .hotelsPage h3{
@@ -58,4 +78,15 @@
     padding: 0.5rem;
     cursor: pointer;
     font-size: inherit;
+}
+
+@media screen and (max-width: 800px) {
+    .hotelsPage_filtersPanel{
+        position: fixed;
+        top: 4rem;
+        transform: translateX(-110%)
+    }
+    .hotelsPage_sortingFilters{
+        display: block;
+    }
 }

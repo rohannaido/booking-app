@@ -61,17 +61,18 @@ const Hotels = () => {
     },[])
 
     const [showLogin, setShowLogin] = useState(false)
-    
-    
+    const [showFiltersMobile, setShowFiltersMobile] = useState((window.innerWidth > 600) ? true : false);
+    console.log(window.innerWidth);
     return (
         <>
             {showLogin && <LoginPanel setShowLogin={setShowLogin} />}
             <NavBar type={"static"} setShowLogin={setShowLogin} />
             <div className='hotelsPage'>
-
-                <div className='hotelsPage_filtersPanel'>
-                    <div>
-                        
+                <div className='hotelsPage_filtersPanel' style={{transform: showFiltersMobile ? "translateX(0%)" : "translate(-110%)" }}>
+                    <div className='hotelsPage_sortingFilters' onClick={() => setShowFiltersMobile(prev => !prev)}>
+                        Sorting / Filters
+                    </div>
+                    <div>    
                         <h3>Sort</h3>
                         <div className='hotelsPage_filterItem sort'>
                             <label htmlFor="priceSort">
