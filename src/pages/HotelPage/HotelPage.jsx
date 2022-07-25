@@ -7,6 +7,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
 import { useSelector } from 'react-redux/es/exports'
 import { calculateTotalRent } from '../../costCalculations';
+import ImageSlider from '../../components/ImageSlider/ImageSlider';
 
 const HotelPage = () => {
 
@@ -15,6 +16,7 @@ const HotelPage = () => {
     const searchDetails = useSelector(state => state.value);
 
     const [hotelData, setHotelData] = useState({});
+    const [showImageSlider, setShowImageSlider] = useState(false);
 
     useEffect(() => {
         const getData = async () => {
@@ -26,13 +28,13 @@ const HotelPage = () => {
     },[])
 
     const [showLogin, setShowLogin] = useState(false);
-
+    console.log(hotelData.images);
     return (
         <div className='hotelPage'>
             {showLogin && <LoginPanel setShowLogin={setShowLogin} />}
             <NavBar type={"static"} setShowLogin={setShowLogin} />
             <div className='hotelPage_div'>
-                <div className='hotelPage_imageDiv'>
+                <div className='hotelPage_imageDiv' onClick={() => setShowImageSlider(true)}>
                     <img src={hotelData.mainImage} alt={hotelData.name} />
                 </div>
                 <div className='hotelPage_contentDiv'>
@@ -47,6 +49,7 @@ const HotelPage = () => {
                     <p className='hotelPage_rentPrice'>₹{hotelData.price} per room per night</p>
                     <button className='hotelPage_bookButton'>Book Now</button>
                 </div>
+                {showImageSlider && hotelData.images && <ImageSlider images={hotelData.images} setShowImageSlider={setShowImageSlider} />}
             </div>
             <Footer />
         </div>

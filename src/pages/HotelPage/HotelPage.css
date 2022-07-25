@@ -6,6 +6,7 @@
     display: flex;
     margin: 2rem var(--side-margin);
     gap: 2rem;
+    min-height: cal(100vh - 150px);
     position: relative;
 }
 
@@ -16,6 +17,7 @@
 .hotelPage_imageDiv{
     min-width: 400px;
     flex: 1;
+    cursor: pointer;
 }
 .hotelPage_imageDiv > img{
     width: 100%;
