@@ -40,8 +40,9 @@
     list-style: none;
     background-color: white;
     border-radius: 0.5rem;
-    width: 100%;
+    width: 80%;
     border: 1px solid #e5e7eb;
+    position: absolute;
 }
 
 .homeSearchBarField_row2_optionsDiv li{
@@ -86,5 +87,24 @@
     border: none;
     background-color: transparent;
     font-size: inherit;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.5rem;
+}
+
+label[for='cityName']{
+    position: relative;
+}
+
+.checkIn_error{
+    font-weight: normal;
+    font-size: 0.75rem;
+    color: red;
+    display: none;
+}
+
+.checkOut_error{
+    font-weight: normal;
+    font-size: 0.75rem;
+    color: red;
+    display: none;
+
 }

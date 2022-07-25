@@ -5,10 +5,20 @@ import homeBg from '../../images/homeBackground.jpg'
 import logo from '../../images/logo.png'
 import {Link} from 'react-router-dom';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const HomeSearchBar = ({setShowLogin}) => {
 
-    const [ searchValue, setSearchValue ] = useState({cityName: ''});
+    const currDate = (new Date()).toISOString().split('T')[0];
+    console.log(currDate);
+
+    let nextDate = new Date();
+    nextDate.setDate(nextDate.getDate() + 1);
+    nextDate = nextDate.toISOString().split('T')[0];
+    
+    const [ searchValue, setSearchValue ] = useState({cityName: '', checkIn: currDate, checkOut: nextDate, rooms: 1});
+
+    const navigate = useNavigate();
 
     return(
         <div className="homeSearchBar" style={{backgroundImage: "url("+homeBg+")"}}>
@@ -28,11 +38,16 @@ const HomeSearchBar = ({setShowLogin}) => {
             <div className='homeSearchBar_formDiv'>
                 <div className='homeSearchBar_form'>
                     <HotelSearchFields searchValue={searchValue} setSearchValue={setSearchValue} />
-                    <Link to={'/hotels/' + searchValue.cityName}>
-                        <button className='homeSearchBar_searchButton'>
+                    {/* <Link to={'/hotels/' + searchValue.cityName.toLowerCase()}> */}
+                        <button className='homeSearchBar_searchButton' 
+                        onClick={() => {
+                            if (searchValue.cityName){
+                                navigate('/hotels/' + searchValue.cityName.toLowerCase())
+                            }
+                        }}>
                             Search
                         </button>
-                    </Link>
+                    {/* </Link> */}
                 </div>
                 <div className='homeSearchBar_menuItemsdiv'>
                     <MenuItems />
