@@ -72,3 +72,9 @@
     color: #3b82f6;
     font-weight: bold;
 }
+
+@media screen and (max-width: 600px) {
+    .offerCard{
+        min-width: 300px;
+    }
+}

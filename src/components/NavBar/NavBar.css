@@ -52,7 +52,7 @@ nav{
 .nav_navOpener{
     cursor: pointer;
     display: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .nav_responsiveNav{
