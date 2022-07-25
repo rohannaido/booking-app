@@ -3,7 +3,7 @@ import {AiOutlineArrowRight, AiOutlineArrowLeft, AiOutlineClose} from 'react-ico
 import { useState } from 'react';
 
 const ImageSlider = ({images, setShowImageSlider}) => {
-    // console.log(images.images[0]);
+    // console.log(images);
     const [imageNumber, setImageNumber] = useState(0);
     return (
         <div className="imageSlider">

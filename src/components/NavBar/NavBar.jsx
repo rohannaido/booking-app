@@ -20,7 +20,7 @@ const NavBar = (props) => {
       }
     }
   
-  console.log(props);
+  // console.log(props);
     
     useEffect(() => {
       window.addEventListener("scroll", scrollAction);
