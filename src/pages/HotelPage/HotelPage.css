@@ -61,4 +61,7 @@
     .hotelPage_div{
         flex-direction: column;
     }
+    .hotelPage_imageDiv{
+        min-width: 300px;
+    }
 }

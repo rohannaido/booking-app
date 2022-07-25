@@ -8,7 +8,7 @@ const ImageSlider = ({images, setShowImageSlider}) => {
     return (
         <div className="imageSlider">
             <div className='imageSlider_container'>
-                <div className='imageSlider_slideButton' onClick={() => setImageNumber(prev => {
+                <div className='imageSlider_slideButton left' onClick={() => setImageNumber(prev => {
                     if(prev > 0){
                         return prev - 1;
                     } return (images.length - 1);
@@ -23,7 +23,7 @@ const ImageSlider = ({images, setShowImageSlider}) => {
                         <AiOutlineClose />
                     </div>
                 </div>
-                <div className='imageSlider_slideButton' onClick={() => setImageNumber(prev => {
+                <div className='imageSlider_slideButton right' onClick={() => setImageNumber(prev => {
                     if(prev + 1 < images.length){
                         return prev + 1;
                     }   return 0;

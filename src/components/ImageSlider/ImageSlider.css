@@ -66,10 +66,26 @@
 }
 
 @media screen and (max-width: 768px) {
+    .imageSlider_container{
+        justify-content: center;
+    }
+
     .imageSlider_imageDiv{
         min-width: 90%;
     }
+
     .imageSlider_slideButton{
         margin: 0;
+        position: absolute;
+    }
+
+    .imageSlider_slideButton.left{
+        left: 0;
+        z-index: 1;
+    }
+    
+    .imageSlider_slideButton.right{
+        right: 0;
+        z-index: 1;    
     }
 }
