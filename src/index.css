@@ -37,7 +37,7 @@ ul{
   padding-inline-start: 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   :root{
     --side-margin: 1rem;
   }

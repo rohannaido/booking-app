@@ -59,7 +59,7 @@
     gap: 1rem; */
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .offersPanel_tabList{
         font-size: 0.75rem;
         overflow-x: scroll;

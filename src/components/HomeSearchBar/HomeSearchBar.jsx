@@ -6,16 +6,18 @@ import logo from '../../images/logo.png'
 import {Link} from 'react-router-dom';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { saveSearch } from '../../redux/store';
+import { useDispatch } from 'react-redux';
 
 const HomeSearchBar = ({setShowLogin}) => {
 
     const currDate = (new Date()).toISOString().split('T')[0];
-    console.log(currDate);
+    const dispatch = useDispatch();
 
     let nextDate = new Date();
     nextDate.setDate(nextDate.getDate() + 1);
     nextDate = nextDate.toISOString().split('T')[0];
-    
+
     const [ searchValue, setSearchValue ] = useState({cityName: '', checkIn: currDate, checkOut: nextDate, rooms: 1});
 
     const navigate = useNavigate();
@@ -42,6 +44,7 @@ const HomeSearchBar = ({setShowLogin}) => {
                         <button className='homeSearchBar_searchButton' 
                         onClick={() => {
                             if (searchValue.cityName){
+                                dispatch( saveSearch(searchValue) )
                                 navigate('/hotels/' + searchValue.cityName.toLowerCase())
                             }
                         }}>

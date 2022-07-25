@@ -1,7 +1,16 @@
 import './HotelCard.css'
+import { useSelector } from 'react-redux/es/exports'
+import { calculateTotalRent } from '../../costCalculations'
 
 const HotelCard = ({hotelData}) => {
-    // console.log(hotelData);
+    
+    const searchDetails = useSelector(state => state.value);
+    // const calculateTotalRent = (searchDetails, hotelData) => {
+    //     const noOfDays = Math.floor((new Date(searchDetails.checkOut) - new Date(searchDetails.checkIn))/86400000);
+    //     const rooms = searchDetails.rooms;
+    //     return hotelData.price * noOfDays * rooms;
+    // }
+    
     return (
         <div className="hotelCard">
             <div className='hotelCard_imageDiv'>
@@ -16,7 +25,8 @@ const HotelCard = ({hotelData}) => {
                         {hotelData.rating}
                     </span>
                 </span>
-                <span className='hotelCard_price'>₹{hotelData.price}</span>
+                <span className='hotelCard_totalPrice'>Total Rent : ₹{calculateTotalRent(searchDetails, hotelData)}</span>
+                <span className='hotelCard_roomPrice'>Charge- ₹{hotelData.price} per room per night</span>
             </div>
         </div>
     )

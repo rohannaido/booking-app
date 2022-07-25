@@ -53,12 +53,16 @@
     font-weight: bold;
 }
 
-.hotelCard_price{
+.hotelCard_totalPrice{
     font-weight: bold;
     font-size: 1.25rem;
 }
 
-@media screen and (max-width: 600px) {
+.hotelCard_roomPrice{
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width: 768px) {
     .hotelCard{
         flex-direction: column;
     }

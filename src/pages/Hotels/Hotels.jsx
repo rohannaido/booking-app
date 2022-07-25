@@ -6,9 +6,11 @@ import { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import {getHotelsByCity} from '../../firebase.js';
 import LoginPanel from '../../components/LoginPanel/LoginPanel';
+import { useSelector } from 'react-redux/es/exports';
 
 const Hotels = () => {
-
+    // const hotelSearch = useSelector(state => state);
+    // console.log(hotelSearch);
     const [hotelsList, setHotelsList] = useState([]);
     const [hotelFilter, setHotelFilter] = useState({
         priceFilter: '0-100000',

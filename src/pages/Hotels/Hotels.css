@@ -80,7 +80,7 @@
     font-size: inherit;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     .hotelsPage_filtersPanel{
         position: fixed;
         top: 4rem;

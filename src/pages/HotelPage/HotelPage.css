@@ -4,9 +4,8 @@
 
 .hotelPage_div{
     display: flex;
-    margin: 2rem 6rem;
+    margin: 2rem var(--side-margin);
     gap: 2rem;
-    height: 100vh;
     position: relative;
 }
 
@@ -16,10 +15,14 @@
 
 .hotelPage_imageDiv{
     min-width: 400px;
+    flex: 1;
 }
-
 .hotelPage_imageDiv > img{
     width: 100%;
+}
+
+.hotelPage_contentDiv{
+    flex: 1.25;   
 }
 
 .hotelPage_bookButton{
@@ -34,4 +37,26 @@
 
 .hotelPage_bookButton:hover {
     background-color: #1d4ed8;
+}
+
+.hotelPage_ratings{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.hotelPage_totalPrice{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.hotelPage_rentPrice{
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .hotelPage_div{
+        flex-direction: column;
+    }
 }

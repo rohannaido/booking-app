@@ -5,12 +5,14 @@ import { getHotelData } from '../../firebase';
 import LoginPanel from '../../components/LoginPanel/LoginPanel';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
+import { useSelector } from 'react-redux/es/exports'
+import { calculateTotalRent } from '../../costCalculations';
 
 const HotelPage = () => {
 
     const location = useLocation();
     const hotelId = location.pathname.split("/")[2];
-    // const hotelId = useLocation
+    const searchDetails = useSelector(state => state.value);
 
     const [hotelData, setHotelData] = useState({});
 
@@ -40,8 +42,9 @@ const HotelPage = () => {
                     <p>
                         {hotelData.description}
                     </p>
-                    <p>{hotelData.rating}</p>
-                    <p>₹{hotelData.price}</p>
+                    <p className='hotelPage_ratings'>Ratings {hotelData.rating}</p>
+                    <p className='hotelPage_totalPrice'>₹{calculateTotalRent(searchDetails, hotelData)} /-</p>
+                    <p className='hotelPage_rentPrice'>₹{hotelData.price} per room per night</p>
                     <button className='hotelPage_bookButton'>Book Now</button>
                 </div>
             </div>

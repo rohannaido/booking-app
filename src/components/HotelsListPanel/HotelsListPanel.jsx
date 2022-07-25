@@ -10,7 +10,7 @@ const HotelsListPanel = ({hotelsList}) => {
             <Link to={`/hotel/${item.id}`} key={item.id} >
                 <HotelCard hotelData={item} />
             </Link>
-            ) : "No Hotels Found"}
+            ) : "Searching ..."}
         </div>
     )
 }
