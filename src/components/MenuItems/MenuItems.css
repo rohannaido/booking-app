@@ -1,6 +1,7 @@
 .menuList{
     list-style: none;
     display: flex;
+    flex-direction: row;
     gap: 1rem;
     align-items: center;
     font-size: inherit;

@@ -3,6 +3,8 @@ import './NavBar.css';
 import logo from '../../images/logo-black.png'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import {GiHamburgerMenu} from 'react-icons/gi'
+
 
 const NavBar = (props) => {
 
@@ -21,9 +23,7 @@ const NavBar = (props) => {
   console.log(props);
     
     useEffect(() => {
-      
       window.addEventListener("scroll", scrollAction);
-      
     },[])
 
     const getNavBarStyle = (type) => {
@@ -36,7 +36,7 @@ const NavBar = (props) => {
       else if(type === "static"){
         return {
           transform: 'translateY(0%)',
-          position: "static",
+          position: "relative",
         }
       }
       else if(showNavBar){
@@ -47,7 +47,7 @@ const NavBar = (props) => {
       }
     }
 
-    
+    const [showResNav, setShowResNav] = useState(false);    
 
     return (
         <nav className="nav" style={getNavBarStyle(type)}>
@@ -57,12 +57,23 @@ const NavBar = (props) => {
                     <img src={logo} alt="app logo" />
                 </div>
               </Link>
+              <div className='nav_menuItems'>
                 <MenuItems />
-                <ul className="nav_loginList">
-                    <li className='nav_loginItem' onClick={() => { setShowLogin(true) }}>
-                      Login
-                    </li>
-                </ul>
+              </div>
+              <ul className="nav_loginList">
+                  <li className='nav_loginItem' onClick={() => { setShowLogin(true) }}>
+                    Login
+                  </li>
+              </ul>
+              <span className='nav_navOpener' onClick={() => setShowResNav(!showResNav)}>
+                <GiHamburgerMenu />
+              </span>
+              <div className='nav_responsiveNav' style={{ display: showResNav ? 'flex': 'none' }}>
+                <MenuItems type='col' />
+                <div className='nav_resLogin' onClick={() => { setShowLogin(true) }}>
+                    Login
+                </div>
+              </div>
             </div>
         </nav>
     )

@@ -4,7 +4,7 @@ nav{
     left: 0;
     height: 60px;
     width: 100vw;
-    z-index: 999;
+    z-index: 99;
     transition: transform 250ms;
     box-shadow: 0 0 5px 0px grey;
     background-color: rgba(255, 255, 255, 0.85);
@@ -32,6 +32,10 @@ nav{
     object-fit:cover;
 }
 
+.nav_menuItems{
+
+}
+
 .nav_loginList{
     list-style: none;
     display: flex;
@@ -43,4 +47,58 @@ nav{
     cursor: pointer;
     font-size: inherit;
     font-weight: bold;
+}
+
+.nav_navOpener{
+    cursor: pointer;
+    display: none;
+    font-size: 2rem;
+}
+
+.nav_responsiveNav{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    right: 1rem;
+    transform: translateY(calc(50% + 60px/2 + 0.5rem)); 
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 5px 0px grey;
+}
+
+.nav_resLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    nav{
+        width: 100vw;
+    }
+
+    .nav .logo{
+        width: 120px;
+        height: 40px;
+    }
+
+    .nav_container{
+        display: flex;
+    }
+
+    .nav_menuItems{
+        display: none;
+    }
+
+    .nav_navOpener{
+        display: inline;
+    }
+
+    .nav_loginList{
+        display: none;
+    }
 }

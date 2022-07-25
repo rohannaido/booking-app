@@ -4,9 +4,18 @@ import { GiRiver } from 'react-icons/gi'
 // import { FaHiking } from 'react-icons/fa';
 import {Link} from 'react-router-dom';
 
-const MenuItems = () => {
+const MenuItems = ({type}) => {
+
+    const menuStyling = () => {
+        if (type === "col"){
+            return 'column'
+        }
+        return ''
+
+    }
+
     return(
-        <ul className="menuList">
+        <ul className="menuList" style={{ flexDirection: menuStyling() }}>
             <Link to='/'>
                 <li className='menuItem'>
                     <span className='menuList_icon'>

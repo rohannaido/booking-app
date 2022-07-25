@@ -75,3 +75,10 @@
     border-radius: 0.5rem;
     font-size: 0.8rem;
 }
+
+@media screen and (max-width: 600px) {
+    .homeSearchBar .logo{
+        width: 120px;
+        height: 40px;
+    }
+}
