@@ -24,7 +24,10 @@ const LoginButton = () => {
                 <span className='loginButton_nameText' onClick={() => { navigate('/bookings') }}>
                     Hi,&nbsp;{displayName.split(' ')[0]}
                 </span>
-                <button className="loginButton_signOutBtn" onClick={() => signOutApp(dispatch)}>
+                <button className="loginButton_signOutBtn" onClick={() => { 
+                    signOutApp(dispatch)
+                    navigate('/')
+                    }  }>
                     Sign Out
                 </button>
             </div>}

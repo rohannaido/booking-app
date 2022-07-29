@@ -1,5 +1,5 @@
 import './HotelPage.css'
-import { useLocation } from 'react-router-dom';
+import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getHotelData } from '../../firebase';
 import LoginPanel from '../../components/LoginPanel/LoginPanel';
@@ -9,14 +9,25 @@ import { useSelector } from 'react-redux/es/exports'
 import { calculateTotalRent } from '../../costCalculations';
 import ImageSlider from '../../components/ImageSlider/ImageSlider';
 import { getStorage, ref, listAll, getDownloadURL } from 'firebase/storage';
+import { createHotelBooking } from '../../firebase/service';
+import { useDispatch } from 'react-redux';
 
 const HotelPage = () => {
 
     const location = useLocation();
     const hotelId = location.pathname.split("/")[2];
     const searchDetails = useSelector(state => state.hotels.value);
-    
+    const { checkIn, checkOut, rooms } = searchDetails;
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const [imagesArr, setImagesArr] = useState([]);
+    const [hotelBookingForm, setHotelBookingForm] = useState({
+        hotelId: hotelId,
+        checkIn, 
+        checkOut, 
+        rooms,
+    })
 
     const getHotelImageUrls = async () => {
         setImagesArr([]);
@@ -28,6 +39,10 @@ const HotelPage = () => {
             setImagesArr(prev => [...prev , url]);
         }
     }
+
+    const handleBookHotel = () => {
+        createHotelBooking(dispatch, hotelBookingForm).then(() => navigate('/bookings'))
+    }
     
     const [hotelData, setHotelData] = useState({});
     const [showImageSlider, setShowImageSlider] = useState(false);
@@ -37,6 +52,7 @@ const HotelPage = () => {
         const getData = async () => {
             const data = await getHotelData(hotelId);
             setHotelData(data);
+            setHotelBookingForm(prev => ({...prev, totalRent: calculateTotalRent(searchDetails, data) }));
             // console.log(data);
         }
         getData();
@@ -63,7 +79,7 @@ const HotelPage = () => {
                     <p className='hotelPage_ratings'>Ratings {hotelData.rating}</p>
                     <p className='hotelPage_totalPrice'>₹{calculateTotalRent(searchDetails, hotelData)} /-</p>
                     <p className='hotelPage_rentPrice'>₹{hotelData.price} per room per night</p>
-                    <button className='hotelPage_bookButton' >
+                    <button className='hotelPage_bookButton' onClick={() => handleBookHotel()} >
                         Book Now
                     </button>
                 </div>

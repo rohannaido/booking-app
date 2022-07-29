@@ -1,0 +1,40 @@
+.hotelBookingCard{
+    display: flex;
+    min-height: 10rem;
+    width: 75%;
+    justify-content: space-between;
+    box-shadow: 0 0 5px 0 gray;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.hotelBookingCard_details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.hotelBookingCard_details h3{
+    margin: 0;
+}
+
+.hotelBookingCard_imageDiv{
+    height: 15rem;
+    flex: 1;
+}
+
+.hotelBookingCard_imageDiv img{
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit:cover;
+}
+
+@media screen and (max-width: 768px) {
+    .hotelBookingCard{
+        display: flex;
+        min-height: 10rem;
+        width: 100%;
+    }
+}
