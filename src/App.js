@@ -5,6 +5,8 @@ import './App.css';
 import {HashRouter, Routes, Route} from 'react-router-dom';
 import Hotels from './pages/Hotels/Hotels';
 import HotelPage from './pages/HotelPage/HotelPage';
+import Login from './pages/Login/Login';
+import SignUp from './pages/Login/SignUp';
 
 function App() {
 
@@ -17,6 +19,8 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/hotels/:city' element={<Hotels />} />
           <Route path='/hotel/:hotelname' element={<HotelPage />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<SignUp />} />
         </Routes>
       </HashRouter>
     </div>
