@@ -1,0 +1,33 @@
+.loginButton_div{
+    display: flex;
+    align-items: center;
+}
+
+.loginButton{
+    background-color: transparent;
+    padding: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    border-radius: 0.5rem;
+}
+
+.loginButton:hover{
+    color: gray;
+    outline: 1px solid gainsboro;
+}
+
+.loginButton_signOutBtn{
+    background-color: transparent;
+    padding: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    border-radius: 0.5rem;
+}
+
+.loginButton_signOutBtn:hover{
+    outline: 1px solid gainsboro;
+}

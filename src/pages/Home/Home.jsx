@@ -9,13 +9,15 @@ import LoginPanel from "../../components/LoginPanel/LoginPanel";
 
 const Home = () => {
 
-    const [showLogin, setShowLogin] = useState(false);
+    // const [showLogin, setShowLogin] = useState(false);
 
     return (
     <div className="home">
-        <NavBar setShowLogin={setShowLogin} />
-        {showLogin && <LoginPanel setShowLogin={setShowLogin} />}
-        <HomeSearchBar setShowLogin={setShowLogin} />
+        {/* <NavBar setShowLogin={setShowLogin} /> */}
+        <NavBar />
+        {/* {showLogin && <LoginPanel setShowLogin={setShowLogin} />} */}
+        {/* <HomeSearchBar setShowLogin={setShowLogin} /> */}
+        <HomeSearchBar />
         <OffersPanel />
         <Newsletter />
         <Footer />

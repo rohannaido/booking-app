@@ -14,7 +14,7 @@ const HotelPage = () => {
 
     const location = useLocation();
     const hotelId = location.pathname.split("/")[2];
-    const searchDetails = useSelector(state => state.value);
+    const searchDetails = useSelector(state => state.hotels.value);
     
     const [imagesArr, setImagesArr] = useState([]);
 

@@ -10,7 +10,7 @@ const HotelsListPanel = ({hotelsList}) => {
             <Link to={`/hotel/${item.id}`} key={item.id} >
                 <HotelCard hotelData={item} />
             </Link>
-            ) : "Searching ..."}
+            ) : <div className='hotelsListPanel_searching'>Searching ...</div>}
         </div>
     )
 }

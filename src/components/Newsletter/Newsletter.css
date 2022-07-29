@@ -70,4 +70,8 @@
     .newsletter_iconSpan{
         font-size: 3rem;
     }
+
+    .newsletter_form{
+        flex-direction: column;
+    }
 }

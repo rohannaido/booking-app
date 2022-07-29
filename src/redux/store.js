@@ -1,4 +1,4 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import {
     persistStore,
     persistReducer,
@@ -10,6 +10,8 @@ import {
     REGISTER,
   } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import userReducer from './userRedux';
+import hotelReducer from './hotesSearchRedux';
 
 const persistConfig = {
     key: "booking",
@@ -17,26 +19,29 @@ const persistConfig = {
     storage,
   };
 
-const initialState = {};
+// const initialState = {};
 
-export const hotelSlice = createSlice({
-  name: "hotelSearch",
-  initialState,
-  reducers: {
-    saveSearch: (state, action) => {
-        console.log("SAVE Hotel ", action.payload);
-        state.value = action.payload;
-    },
-    clearSearch: (state) => {
-        console.log("SIGN OUT REDUCER ");
-        state.value = {};
-    }
-  },
-});
+// export const hotelSlice = createSlice({
+//   name: "hotelSearch",
+//   initialState,
+//   reducers: {
+//     saveSearch: (state, action) => {
+//         console.log("SAVE Hotel ", action.payload);
+//         state.value = action.payload;
+//     },
+//     clearSearch: (state) => {
+//         console.log("SIGN OUT REDUCER ");
+//         state.value = {};
+//     }
+//   },
+// });
 
-const persistedReducer = persistReducer(persistConfig, hotelSlice.reducer);
+const rootReducer = combineReducers({ user: userReducer, hotels: hotelReducer });
 
-export const { saveSearch, clearSearch } = hotelSlice.actions;
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+// const persistedReducer = persistReducer(persistConfig, hotelSlice.reducer);
+
+// export const { saveSearch, clearSearch } = hotelSlice.actions;
 export const store = configureStore({
     reducer: persistedReducer,
     middleware: (getDefaultMiddleware) =>

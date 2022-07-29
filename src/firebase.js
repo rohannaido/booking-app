@@ -56,7 +56,6 @@ async function getHotelData(hotelId){
 }
 
  async function loginToApp(email, password){
-  console.log(email + ":::; " + password);
   try{
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;

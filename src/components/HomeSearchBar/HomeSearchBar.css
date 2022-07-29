@@ -31,9 +31,10 @@
     color: white;
 }
 
-.homeSearchBar_loginBtn{
+.homeSearchBar_loginBtn button{
     cursor: pointer;
     font-weight: bold;
+    color: white;
 }
 
 .homeSearchBar_formDiv{

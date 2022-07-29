@@ -4,7 +4,7 @@ import logo from '../../images/logo-black.png'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {GiHamburgerMenu} from 'react-icons/gi'
-
+import LoginButton from '../LoginButton/LoginButton';
 
 const NavBar = (props) => {
 
@@ -61,8 +61,9 @@ const NavBar = (props) => {
                 <MenuItems />
               </div>
               <ul className="nav_loginList">
-                  <li className='nav_loginItem' onClick={() => { setShowLogin(true) }}>
-                    Login
+                  {/* <li className='nav_loginItem' onClick={() => { setShowLogin(true) }}> */}
+                  <li className='nav_loginItem'>
+                    <LoginButton />
                   </li>
               </ul>
               <span className='nav_navOpener' onClick={() => setShowResNav(!showResNav)}>
@@ -70,8 +71,9 @@ const NavBar = (props) => {
               </span>
               <div className='nav_responsiveNav' style={{ display: showResNav ? 'flex': 'none' }}>
                 <MenuItems type='col' />
-                <div className='nav_resLogin' onClick={() => { setShowLogin(true) }}>
-                    Login
+                {/* <div className='nav_resLogin' onClick={() => { setShowLogin(true) }}> */}
+                <div className='nav_resLogin'>
+                    <LoginButton />
                 </div>
               </div>
             </div>

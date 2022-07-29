@@ -6,8 +6,9 @@ import logo from '../../images/logo.png'
 import {Link} from 'react-router-dom';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { saveSearch } from '../../redux/store';
+import { saveSearch } from '../../redux/hotesSearchRedux';
 import { useDispatch } from 'react-redux';
+import LoginButton from '../LoginButton/LoginButton';
 
 const HomeSearchBar = ({setShowLogin}) => {
 
@@ -32,8 +33,9 @@ const HomeSearchBar = ({setShowLogin}) => {
                     {/* <li>Download the App</li>
                     <li>Introducing myBiz</li>
                     <li>My Trips</li> */}
-                    <li className='homeSearchBar_loginBtn' onClick={() => setShowLogin(true)}>
-                        Login
+                    {/* <li className='homeSearchBar_loginBtn' onClick={() => setShowLogin(true)}> */}
+                    <li className='homeSearchBar_loginBtn'>
+                        <LoginButton />
                     </li>
                 </ul>
             </div>
