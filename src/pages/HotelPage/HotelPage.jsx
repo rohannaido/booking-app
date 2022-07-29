@@ -63,7 +63,9 @@ const HotelPage = () => {
                     <p className='hotelPage_ratings'>Ratings {hotelData.rating}</p>
                     <p className='hotelPage_totalPrice'>₹{calculateTotalRent(searchDetails, hotelData)} /-</p>
                     <p className='hotelPage_rentPrice'>₹{hotelData.price} per room per night</p>
-                    <button className='hotelPage_bookButton'>Book Now</button>
+                    <button className='hotelPage_bookButton' >
+                        Book Now
+                    </button>
                 </div>
                 {showImageSlider && imagesArr.length && <ImageSlider images={imagesArr} setShowImageSlider={setShowImageSlider} />}
             </div>

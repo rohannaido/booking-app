@@ -1,6 +1,7 @@
 .loginButton_div{
     display: flex;
     align-items: center;
+    font-size: 0.8rem;
 }
 
 .loginButton{
@@ -18,14 +19,25 @@
     outline: 1px solid gainsboro;
 }
 
+.loginButton_nameText{    
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.loginButton_nameText:hover{
+    outline: 1px solid blue;
+}
+
 .loginButton_signOutBtn{
     background-color: transparent;
     padding: 0.5rem;
     border: none;
-    font-size: 1rem;
     cursor: pointer;
     font-family: inherit;
     border-radius: 0.5rem;
+    font-weight: normal;
 }
 
 .loginButton_signOutBtn:hover{

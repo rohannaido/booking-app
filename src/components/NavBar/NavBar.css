@@ -40,11 +40,9 @@ nav{
     list-style: none;
     display: flex;
     gap: 1rem;
-    font-size: 0.8rem;
 }
 
 .nav_loginItem{
-    cursor: pointer;
     font-size: inherit;
     font-weight: bold;
 }
